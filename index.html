@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Scales</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- Header / Controls -->
+        <header>
+            <div class="title">Play Scales</div>
+            <div class="controls">
+                <div class="switch-group">
+                    <label>Instrument</label>
+                    <div class="toggle-pill">
+                        <button id="btn-soprano" class="active">Soprano</button>
+                        <button id="btn-alto">Alto</button>
+                        <button id="btn-bass">Bass</button>
+                    </div>
+                </div>
+
+                <div class="switch-group">
+                    <label>Speed (BPM): <span id="bpm-value">60</span></label>
+                    <input type="range" id="speed-slider" min="10" max="120" value="60" step="1" style="width: 120px; cursor: pointer;">
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Workspace -->
+        <main>
+            <!-- Left: Staff Display -->
+            <div class="panel staff-panel">
+                <div id="staff-title" class="staff-title">Scale</div>
+                <div class="staff-container" id="staff-container">
+                    <!-- SVG Staff injected here -->
+                </div>
+            </div>
+
+            <!-- Right: 3D Recorder Display -->
+            <div class="panel recorder-panel">
+                <div class="recorder-wrapper">
+                    <!-- Recorder SVG -->
+                    <div id="recorder-visual" class="recorder-visual"></div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+                <div class="bank-controls">
+                    <label class="bank-label">Select a Scale</label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="check-one-octave">
+                        <span class="checkmark"></span>
+                        One Octave
+                    </label>
+                </div>
+                <div id="note-bank" class="note-bank">
+                    <!-- Javascript will populate buttons here -->
+                </div>
+                </div>
+            </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="fingerings.js"></script>
+    <script src="audio.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
